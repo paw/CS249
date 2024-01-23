@@ -1,3 +1,3 @@
 module coretest {   
-    exports edu.realemj.testing; 
+    exports edu.realemj.testing;
 }

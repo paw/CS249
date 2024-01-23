@@ -3,7 +3,7 @@ module exercisesmod {
     requires javafx.fxml;
     requires transitive javafx.graphics;
 
-    opens edu.realemj.exercises00 to javafx.fxml;
+    opens edu.sullivb.exercises00 to javafx.fxml;
 
-    exports edu.realemj.exercises00;
+    exports edu.sullivb.exercises00;
 }

@@ -1,3 +1,3 @@
 module howdy {    
-    exports edu.realemj.howdy;      
+    exports edu.realemj.howdy;
 }

@@ -5,6 +5,6 @@ module howdyfx {
     
     requires howdy;    
     
-    opens edu.realemj.howdyfx to javafx.fxml;    
-    exports edu.realemj.howdyfx;      
+    opens edu.realemj.howdyfx to javafx.fxml;
+    exports edu.realemj.howdyfx;
 }
