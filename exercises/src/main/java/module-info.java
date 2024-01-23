@@ -6,4 +6,5 @@ module exercisesmod {
     opens edu.sullivb.exercises00 to javafx.fxml;
 
     exports edu.sullivb.exercises00;
+    exports edu.sullivb.exercises02;
 }
