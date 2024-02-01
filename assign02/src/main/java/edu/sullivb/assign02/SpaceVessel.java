@@ -1,6 +1,5 @@
 package edu.sullivb.assign02;
 import java.util.*;
-import java.lang.*;
 
 public class SpaceVessel {
     private String vesselName = "";
@@ -19,9 +18,10 @@ public class SpaceVessel {
     public void setLength(int feet) {
         length = feet;
     }
-    public void setWeight(double pounds) {
+    public void setWeight(int pounds) {
         weight = pounds;
     }
+
     /*Getters*/
     public String getName() {
         return vesselName;
