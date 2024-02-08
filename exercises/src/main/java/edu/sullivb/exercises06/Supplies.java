@@ -16,6 +16,12 @@ public class Supplies {
         }
         return cnt;
     }
+    public Supplies() {
+        totalFood = 0;
+    }
+    public Supplies(int food) {
+        totalFood = food;
+    }
     public String toString() {
         String s = "";
         s += "******************************\n";
