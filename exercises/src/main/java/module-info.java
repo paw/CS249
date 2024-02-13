@@ -12,4 +12,5 @@ module exercisesmod {
     exports edu.sullivb.exercises07;
     exports edu.sullivb.exercises08;
     exports edu.sullivb.exercises09;
+    exports edu.sullivb.exercises10;
 }
