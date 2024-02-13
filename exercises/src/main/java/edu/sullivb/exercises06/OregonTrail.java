@@ -44,6 +44,7 @@ public class OregonTrail {
             Scanner parseInput = new Scanner(input);
             try {
                 menuOptionChosen = parseInput.nextInt();
+                validInput = true;
             } catch(java.util.InputMismatchException ime) {
                 System.out.println("Please enter a number on the menu.");
                 menuOptionChosen = -1;
@@ -70,8 +71,6 @@ public class OregonTrail {
                     }
                 }
             }
-            //input = inp.nextLine();
-            validInput = true;
         }
     }
 }
