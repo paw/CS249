@@ -25,7 +25,7 @@ test {
 }
 
 application {
-    mainClass = "edu.sullivb.exercises10.CircleLand"
+    mainClass = "edu.sullivb.exercises10.OregonTrail"
     mainModule = "exercisesmod"
 }
 

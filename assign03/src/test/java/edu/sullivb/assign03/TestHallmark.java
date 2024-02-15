@@ -1,4 +1,4 @@
-package edu.realemj.assign03;
+package edu.sullivb.assign03;
 
 import edu.realemj.testing.GeneralTesting;
 import org.testng.Assert;
