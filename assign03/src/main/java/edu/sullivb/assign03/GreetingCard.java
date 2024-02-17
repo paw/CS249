@@ -12,7 +12,7 @@ public class GreetingCard {
         boundary = boundaryChar;
     }
     public GreetingCard(String [] lines, char boundary, int width, int numLines) {
-        //just for fun
+        //alt constructor just for fun
         setLines(lines);
         setBoundaryChar(boundary);
         setLinesPerCard(numLines);
