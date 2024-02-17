@@ -18,6 +18,9 @@ public class Party {
         System.err.println(name + " is not in your party!");
         return null;
     }
+    public Person getMemberByIndex(int index) {
+        return people[index];
+    }
     public int partyCount() {
         return people.length;
     }

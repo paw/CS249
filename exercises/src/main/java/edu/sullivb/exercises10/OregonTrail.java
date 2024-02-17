@@ -6,7 +6,8 @@ public class OregonTrail {
         Party party = new Party(names);
         System.out.println(party);
         party.getMember("the final pam");
-        System.out.println("YOU HAVE BEEN CHOSEN: " + party.getMember("vault boy") + "\n");
+        System.out.println("test index: " + party.getMemberByIndex(2).getName());
+        System.out.println("YOU HAVE BEEN CHOSEN: " + party.getMember("vault boy") .getName() + "\n");
         party.getMember("vault boy").die();
         System.out.println(party);
         System.out.println(party.isDead());
