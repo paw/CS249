@@ -3,13 +3,19 @@ import edu.sullivb.exercises09.Matrix;
 
 public class Circle {
     // Data w/ Defaults
-    private double radius = 1.0;
-    private Matrix pos = Matrix.makePoint2D(0,0);
+    private static final double DEFAULT_RADIUS = 1.0;
+    private double radius = DEFAULT_RADIUS; // 1.0
+    private Matrix pos = Matrix.makePoint2D(0,0); // (0,0)
 
     // Constructors
-    public Circle() {} // creates a unit circle at 0,0
+    public Circle() {
+        this(DEFAULT_RADIUS, Matrix.makePoint2D(0,0));
+    } // creates a unit circle at 0,0
     public Circle(double r) {
-        setRadius(r);
+        this(r, Matrix.makePoint2D(0,0));
+    }
+    public Circle(Matrix c) {
+        this(DEFAULT_RADIUS, c);
     }
     public Circle(double r, Matrix c) {
         setRadius(r);
@@ -20,9 +26,9 @@ public class Circle {
     public double getRadius() {
         return radius;
     }
-    public void setRadius(double r) {
-        if (r >= 0) {
-            radius = r;
+    public void setRadius(double radius) {
+        if (radius >= 0) {
+            this.radius = radius;
         }
     }
     public Matrix getCenter() {
@@ -33,6 +39,18 @@ public class Circle {
     }
     public double getArea() {
         return Math.PI * radius * radius;
+    }
+
+    public void judgeMyself() {
+        judgeCircle(this);
+    }
+
+    public static void judgeCircle(Circle c) {
+        if (c.getRadius() > 5.0) {
+            System.out.println("BIG CIRCLE");
+        } else {
+            System.out.println("small circle");
+        }
     }
 
     // to Strings
