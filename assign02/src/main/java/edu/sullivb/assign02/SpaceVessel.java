@@ -44,3 +44,4 @@ public class SpaceVessel {
         return "NAME: " + vesselName + "\nLENGTH: " + getLengthString() + "\nWEIGHT: " + getWeightString() + "\n";
     }
 }
+
