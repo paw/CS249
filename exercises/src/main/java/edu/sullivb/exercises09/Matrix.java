@@ -60,6 +60,29 @@ public class Matrix {
     public String toPoint2DString() {
         return "(" + m[0][0] + ", " + m[1][0] + ")";
     }
+    public String toRGBAString() {
+        return "rgba(" + m[0][0] + ", " + m[1][0] + ", " + m[2][0] + ", " + m[3][0] + ")";
+    }
+    public boolean equals(Object other) {
+        boolean same = false;
+        if (other instanceof Matrix otherM) {
+            if(this.getRowCount() == otherM.getRowCount() && this.getColCnt() == otherM.getColCnt()) {
+
+                final double EPS = 1e-10;
+                boolean valuesSame = true;
+                for (int r = 0; r < getRowCount(); r++) {
+                    for(int c = 0; c < getColCnt(); c++) {
+                        if (Math.abs(m[r][c] - otherM.m[r][c]) > EPS) {
+                            valuesSame = false;
+                            break;
+                        }
+                    }
+                }
+                same = valuesSame;
+            }
+        }
+        return same;
+    }
 
     public Matrix multiply(Matrix other) {
         if (getColCnt() != other.getRowCount()) {
@@ -85,6 +108,14 @@ public class Matrix {
         v.set(0,0,x);
         v.set(1,0,y);
         v.set(2,0,1);
+        return v;
+    }
+    public static Matrix makeRGBA(double r, double g, double b, double a) {
+        Matrix v = new Matrix(4,1);
+        v.set(0,0,r);
+        v.set(1,0,g);
+        v.set(2,0,b);
+        v.set(3,0,a);
         return v;
     }
     public static Matrix makeTranslation2D(double tx, double ty) {
