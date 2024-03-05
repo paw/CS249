@@ -1,0 +1,6 @@
+- underline = static
+- \+ = public
+- \- = private
+- \# = protected
+- line w/ empty diamond = association
+- line w/ filled diamond = composition
