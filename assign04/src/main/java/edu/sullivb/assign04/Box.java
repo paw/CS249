@@ -1,12 +1,12 @@
 package edu.sullivb.assign04;
 
 public class Box {
-    private int startRow;
-    private int endRow;
-    private int startCol;
-    private int endCol;
-    private boolean filled = false;
-    private char drawChar;
+    private final int startRow;
+    private final int endRow;
+    private final int startCol;
+    private final int endCol;
+    private final boolean filled;
+    private final char drawChar;
     public Box(int sr, int sc, int er, int ec, boolean filled, char drawChar) {
         startRow = sr;
         startCol = sc;
