@@ -5,9 +5,6 @@ public class GameBoard {
     private char[][] board = new char[4][4];
     private char fillChar = '#';
 
-    public GameBoard() {
-        clear();
-    }
     public GameBoard(int rowCnt, int colCnt, char fillChar) {
         if (rowCnt <= 0 || colCnt <= 0) {
             System.err.println("Invalid row or column count, using default dimensions of 4 x 4.");
