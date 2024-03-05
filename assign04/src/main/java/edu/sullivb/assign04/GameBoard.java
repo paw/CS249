@@ -3,7 +3,7 @@ package edu.sullivb.assign04;
 public class GameBoard {
 
     private char[][] board = new char[4][4];
-    private char fillChar = '#';
+    private char fillChar;
 
     public GameBoard(int rowCnt, int colCnt, char fillChar) {
         if (rowCnt <= 0 || colCnt <= 0) {
