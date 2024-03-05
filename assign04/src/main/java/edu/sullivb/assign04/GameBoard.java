@@ -7,7 +7,7 @@ public class GameBoard {
 
     public GameBoard(int rowCnt, int colCnt, char fillChar) {
         if (rowCnt <= 0 || colCnt <= 0) {
-            System.err.println("Invalid row or column count, using default dimensions of 4 x 4.");
+            System.err.println("Invalid row or column count provided in constructor, using default dimension: 4 x 4");
         } else {
             board = new char[rowCnt][colCnt];
         }
@@ -34,7 +34,7 @@ public class GameBoard {
         if (isValidPosition(row, col)) {
             return board[row][col];
         } else {
-            System.err.println("Tried to retrieve char at an invalid position: (" + row + "," + col + ")");
+            // System.err.println("Tried to retrieve char at an invalid position: (" + row + "," + col + ")");
             return ' ';
         }
     }
@@ -43,7 +43,7 @@ public class GameBoard {
             board[row][col] = c;
             return true;
         } else {
-            System.err.println("Tried to set char at an invalid position: (" + row + "," + col + ")");
+            // System.err.println("Tried to set char at an invalid position: (" + row + "," + col + ")");
             return false;
         }
     }
