@@ -22,3 +22,4 @@ public class Hallmark {
         return new GreetingCard(allLines, boundaryChar);
     }
 }
+
