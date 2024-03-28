@@ -8,7 +8,6 @@ public class Woods {
     public Giant createGiant(String name, String type) {
         String monster = type.toUpperCase();
         if(name.isEmpty()) {
-            //System.err.println("You must provide a name.");
             return null;
         } else {
             switch (monster) {
@@ -28,7 +27,6 @@ public class Woods {
                     return new Huorn(name);
                 }
                 default -> {
-                    //System.err.println("Giant type " + type + " does not exist!");
                     return null;
                 }
             }
