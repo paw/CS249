@@ -25,7 +25,7 @@ test {
 }
 
 application {
-    mainClass = "edu.sullivb.exercises12.ShapeLand"
+    mainClass = "edu.sullivb.exercises13.Rescaler"
     mainModule = "exercisesmod"
 }
 

@@ -110,6 +110,21 @@ public class Matrix {
         v.set(2,0,1);
         return v;
     }
+    public static Matrix makePoint3D(double x, double y, double z) {
+        Matrix v = new Matrix(4, 1);
+        v.set(0,0, x);
+        v.set(1,0, y);
+        v.set(2, 0, z);
+        v.set(3, 0, 1);
+        return v;
+    }
+
+    public String getOBJVertexString() {
+        return "v "
+                + get(0,0) + " "
+                + get(1,0) + " "
+                + get(2,0);
+    }
     public static Matrix makeRGBA(double r, double g, double b, double a) {
         Matrix v = new Matrix(4,1);
         v.set(0,0,r);
@@ -125,6 +140,27 @@ public class Matrix {
         m.set(2,2,1);
         m.set(0,2,tx);
         m.set(1,2,ty);
+        return m;
+    }
+    public static Matrix makeScaling3D(double sx, double sy, double sz) {
+        Matrix m = new Matrix(4,4);
+        m.set(0,0,sx);
+        m.set(1,1,sy);
+        m.set(2,2,sz);
+        m.set(3,3,1);
+        return m;
+    }
+    public static Matrix makeRotationZ3D(double angle) {
+        Matrix m = new Matrix(4,4);
+        double rad = Math.toRadians(angle);
+        m.set(0,0,Math.cos(rad));
+        m.set(0,1,-Math.sin(rad));
+
+        m.set(1,0,Math.sin(rad));
+        m.set(1,1,Math.cos(rad));
+
+        m.set(2,1,1);
+        m.set(2,2,1);
         return m;
     }
 }
