@@ -1,9 +1,7 @@
 package edu.sullivb.assign05;
 
 public class Troll extends Giant {
-    public Troll(String name) {
-        super(name);
-    }
+    public Troll(String name) { super(name); }
     public String toString() {
         return "Troll " + super.toString();
     }

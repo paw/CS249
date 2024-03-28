@@ -1,9 +1,7 @@
 package edu.sullivb.assign05;
 
 public class Huorn extends Tree {
-    public Huorn(String name) {
-        super(name);
-    }
+    public Huorn(String name) { super(name); }
     public String toString() {
         return "Huorn " + super.toString();
     }
