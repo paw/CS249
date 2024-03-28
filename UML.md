@@ -1,4 +1,4 @@
-- underline = static
+- \_underline\_ = static
 - \+ = public
 - \- = private
 - \# = protected
