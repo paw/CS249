@@ -8,7 +8,6 @@ public class Woods {
     public Giant createGiant(String name, String type) {
         String monster = type.toUpperCase();
         if(name.isEmpty()) {
-            //System.err.println("You must provide a name.");
             return null;
         } else {
             switch (monster) {
@@ -28,7 +27,6 @@ public class Woods {
                     return new Huorn(name);
                 }
                 default -> {
-                    //System.err.println("Giant type " + type + " does not exist!");
                     return null;
                 }
             }
@@ -64,7 +62,7 @@ public class Woods {
         for (Giant g : giants) {
             if(g instanceof Tree) {
                 sb.append("\n- ").append(g);
-                sb.append(": ").append(((Tree) g).speak());
+                sb.append(": ").append(((Tree) g).speak()); // must cast to tree to speak
             }
         }
         System.out.println(sb);
@@ -75,7 +73,7 @@ public class Woods {
         for (Giant g : giants) {
             if(g instanceof Troll) {
                 sb.append("\n- ").append(g);
-                sb.append(": ").append(((Troll) g).cook());
+                sb.append(": ").append(((Troll) g).cook()); // must cast to troll to cook
             }
         }
         System.out.println(sb);

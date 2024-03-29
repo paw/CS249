@@ -4,3 +4,4 @@
 - \# = protected
 - line w/ empty diamond = association
 - line w/ filled diamond = composition
+- arrow with empty triangle = extends
