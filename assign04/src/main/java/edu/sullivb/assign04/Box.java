@@ -38,3 +38,4 @@ public class Box {
         return sb.append("Box from (").append(startRow).append(",").append(startCol).append(") to (").append(endRow).append(",").append(endCol).append(") with char '").append(drawChar).append("'").toString();
     }
 }
+
