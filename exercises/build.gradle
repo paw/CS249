@@ -25,7 +25,7 @@ test {
 }
 
 application {
-    mainClass = "edu.sullivb.exercises13.Rescaler"
+    mainClass = "edu.sullivb.exercises15.strategy.BearSimulator"
     mainModule = "exercisesmod"
 }
 
