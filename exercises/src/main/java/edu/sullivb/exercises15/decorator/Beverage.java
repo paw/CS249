@@ -1,7 +1,7 @@
 package edu.sullivb.exercises15.decorator;
 
 public abstract class Beverage {
-    private String desc = "";
+    protected String desc = "";
     protected Beverage(String desc) {
         this.desc = desc;
     }
