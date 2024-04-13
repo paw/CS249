@@ -3,8 +3,8 @@ package edu.sullivb.assign06;
 import java.util.Scanner;
 
 public abstract class Creature implements Loadable, Drawable {
-    int col;
-    int row;
+    private int col;
+    private int row;
 
     protected Creature() {
         setRow(0);

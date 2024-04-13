@@ -1,7 +1,6 @@
 package edu.sullivb.assign06;
 
 import edu.sullivb.assign04.GameBoard;
-
 import java.io.PrintWriter;
 import java.util.*;
 
@@ -28,7 +27,7 @@ public class GameState implements Loadable {
     }
     public void load(Scanner input) throws GameFileException {
         loadables.clear();
-        baseMap = new GameBoard(mapRows, mapCols, mapChar);
+        baseMap.clear();
         int linesInFile = input.nextInt();
         for (int i = 0; i < linesInFile; i++) {
             String typeName = input.next();

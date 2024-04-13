@@ -1,4 +1,5 @@
 package edu.sullivb.assign06;
+
 import edu.sullivb.assign04.GameBoard;
 
 public class Rat extends Creature {

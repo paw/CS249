@@ -3,7 +3,7 @@ package edu.sullivb.assign06;
 import java.util.Scanner;
 
 public class Tome extends Item {
-    String skill = "";
+    private String skill = "";
 
     public Tome() {}
 
