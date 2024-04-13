@@ -1,5 +1,5 @@
 package edu.sullivb.assign06;
-import edu.realemj.assign04.GameBoard;
+import edu.sullivb.assign04.GameBoard;
 //NOTE: CHANGE realemj to YOUR SITNETID!!!
 import org.testng.annotations.Test;
 
