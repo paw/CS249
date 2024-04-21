@@ -4,7 +4,7 @@ import edu.sullivb.assign06.Creature;
 import edu.sullivb.assign04.GameBoard;
 
 public class Bat extends Creature implements Mover {
-    private MoveAlgorithm move = new AvoidPlayer();
+    private MoveAlgorithm movement = new AvoidPlayer();
     public Bat() {}
     public Bat(int row, int col) {
         super(row, col);
@@ -14,5 +14,8 @@ public class Bat extends Creature implements Mover {
     }
     public void draw(GameBoard map) {
         map.setPos(getRow(),getCol(),'B');
+    }
+    public void performMove(Player p) {
+        movement.move(this, p);
     }
 }

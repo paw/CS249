@@ -1,7 +1,7 @@
 package edu.sullivb.assign07;
 
-import edu.realemj.assign04.GameBoard;
-import edu.realemj.assign06.*;
+import edu.sullivb.assign04.GameBoard;
+import edu.sullivb.assign06.*;
 import java.util.*;
 public class Thunderdome {
     public static void main(String [] args) {

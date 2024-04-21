@@ -1,6 +1,6 @@
 package edu.sullivb.assign07;
 
-import edu.realemj.assign06.*;
+import edu.sullivb.assign06.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.Assert;

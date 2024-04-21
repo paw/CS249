@@ -1,8 +1,8 @@
 package edu.sullivb.assign07;
 
-import edu.realemj.assign04.GameBoard;
-import edu.realemj.assign06.Creature;
-import edu.realemj.assign06.GameFileException;
+import edu.sullivb.assign04.GameBoard;
+import edu.sullivb.assign06.Creature;
+import edu.sullivb.assign06.GameFileException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

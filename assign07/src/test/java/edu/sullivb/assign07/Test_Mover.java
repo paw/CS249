@@ -1,7 +1,7 @@
 package edu.sullivb.assign07;
 
-import edu.realemj.assign06.Creature;
-import edu.realemj.assign06.Rat;
+import edu.sullivb.assign06.Creature;
+import edu.sullivb.assign06.Rat;
 import org.testng.annotations.Test;
 
 public class Test_Mover {
