@@ -1,4 +1,4 @@
-package edu.realemj.assign07;
+package edu.sullivb.assign07;
 
 import edu.realemj.assign04.GameBoard;
 import edu.realemj.assign06.*;

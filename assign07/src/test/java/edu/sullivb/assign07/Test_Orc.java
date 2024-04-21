@@ -1,4 +1,4 @@
-package edu.realemj.assign07;
+package edu.sullivb.assign07;
 
 import edu.realemj.assign04.GameBoard;
 import edu.realemj.assign06.Creature;
@@ -9,21 +9,21 @@ import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
-public class Test_Bat {
+public class Test_Orc {
 
     private final static int EXTENT = 10;
 
     @Test()
     public void testConstructorAndData() {
         // Create Creature
-        Creature m = new Bat();
+        Creature m = new Orc();
         Assert.assertEquals(m.getRow(), 0);
         Assert.assertEquals(m.getCol(), 0);
 
         // Create Creature with different locations
         for (int row = -EXTENT; row <= EXTENT; row++) {
             for (int col = -EXTENT; col <= EXTENT; col++) {
-                Creature m2 = new Bat(row, col);
+                Creature m2 = new Orc(row, col);
                 Assert.assertEquals(m2.getRow(), row);
                 Assert.assertEquals(m2.getCol(), col);
             }
@@ -33,7 +33,7 @@ public class Test_Bat {
     @Test()
     public void testSetters() {
         // Create Creature
-        Creature m = new Bat();
+        Creature m = new Orc();
 
         // Set Creature with different locations
         for (int row = -EXTENT; row <= EXTENT; row++) {
@@ -48,8 +48,8 @@ public class Test_Bat {
 
     @Test()
     public void testLoad() {
-        // Create Monster (requires Bat to work)
-        Creature m = new Bat();
+        // Create Monster (requires Player to work)
+        Creature m = new Orc();
 
         // Create Scanners that contain different rows and columns
         for (int row = -EXTENT; row <= EXTENT; row++) {
@@ -95,8 +95,8 @@ public class Test_Bat {
 
     @Test()
     public void testDraw() {
-        // Create Creature (requires Bat to work)
-        Creature m = new Bat();
+        // Create Creature (requires Orc to work)
+        Creature m = new Orc();
 
         // Create GameBoard
         GameBoard map = new GameBoard(10, 20, '.');
@@ -105,7 +105,7 @@ public class Test_Bat {
         // 1st draw
         m.draw(map);
         Assert.assertEquals(map.getBoardString(),
-                "B...................\n" +
+                "O...................\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
@@ -121,12 +121,12 @@ public class Test_Bat {
         m.setCol(9);
         m.draw(map);
         Assert.assertEquals(map.getBoardString(),
-                "B...................\n" +
+                "O...................\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
-                        ".........B..........\n" +
+                        ".........O..........\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
@@ -137,40 +137,40 @@ public class Test_Bat {
         m.setCol(17);
         m.draw(map);
         Assert.assertEquals(map.getBoardString(),
-                "B...................\n" +
-                        ".................B..\n" +
+                "O...................\n" +
+                        ".................O..\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
-                        ".........B..........\n" +
+                        ".........O..........\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n");
 
         // 4th draw
-        m = new Bat(7, -6);
+        m = new Orc(7, -6);
         m.draw(map);
         Assert.assertEquals(map.getBoardString(),
-                "B...................\n" +
-                        ".................B..\n" +
+                "O...................\n" +
+                        ".................O..\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
-                        ".........B..........\n" +
+                        ".........O..........\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n" +
                         "....................\n");
     }
 
-    // Test that Bat implements Mover
+    // Test that Orc implements Mover
     @Test()
     public void testImplementsMover() {
-        Mover m = new Bat();
+        Mover m = new Orc();
     }
 
-    // Test that Bat uses an AvoidPlayer under the hood
+    // Check Orc seeks player
     @DataProvider(name="posGen")
     public Object[][] posGen() {
         int numRows = 5;
@@ -197,18 +197,18 @@ public class Test_Bat {
     }
 
     @Test(dataProvider = "posGen")
-    public void testAvoiding(Integer row, Integer col, Integer rowOff, Integer colOff) {
+    public void testSeeking(Integer row, Integer col, Integer rowOff, Integer colOff) {
         Player p = new Player(row,col);
-        Bat b = new Bat(row+rowOff,col+colOff);
-        b.performMove(p);
+        Orc c = new Orc(row+rowOff,col+colOff);
+        c.performMove(p);
 
         int rowInc = 0;
-        if(rowOff > 0) rowInc = 1;
-        else if(rowOff < 0) rowInc = -1;
+        if(rowOff > 0) rowInc = -1;
+        else if(rowOff < 0) rowInc = 1;
 
         int colInc = 0;
-        if(colOff > 0) colInc = 1;
-        else if(colOff < 0) colInc = -1;
+        if(colOff > 0) colInc = -1;
+        else if(colOff < 0) colInc = 1;
 
         if(Math.abs(rowOff) > Math.abs(colOff)) {
             colInc = 0;
@@ -217,8 +217,7 @@ public class Test_Bat {
             rowInc = 0;
         }
 
-        Assert.assertEquals(b.getRow(), row+rowOff+rowInc);
-        Assert.assertEquals(b.getCol(), col+colOff+colInc);
+        Assert.assertEquals(c.getRow(), row+rowOff+rowInc);
+        Assert.assertEquals(c.getCol(), col+colOff+colInc);
     }
-
 }
